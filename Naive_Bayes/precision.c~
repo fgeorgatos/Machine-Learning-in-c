@@ -1,0 +1,11 @@
+void precesion() //precision Function
+{
+ int p1,ip,i,j;
+ for(i=0;i<943;i++)
+ {
+  for(p1=1;user[i].mcount;p1++)
+  {
+   
+  }
+ } 
+}

@@ -1,0 +1,12 @@
+NB_recommended: main.o parse.o recommend.o precision.o
+	gcc -o NB_recommended main.o parse.o recommend.o precision.o -lm -Wall
+main.o: main.c 
+	gcc -c main.c -lm -Wall
+parse.o: parse.c
+	gcc -c parse.c -lm -Wall
+recommend.o: recommend.c
+	gcc -c recommend.c -lm -Wall
+precision.o: precision.c 
+	gcc -c precision.c -lm -Wall
+clean :
+	rm -rf*.o NB_recommended
