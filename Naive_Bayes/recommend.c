@@ -38,7 +38,7 @@ void recommendation()
      printf("%d  ",unseen[l]);
    }
    printf("\n Total Unseen Movie : %d\n",x);*/
-   int sp,mp,m,movie_recomend[NO_OF_RECOMMENDED],tot_unseen,tot_movie;
+   int sp,mp,m,movie_recommend[NO_OF_RECOMMENDED],tot_unseen,tot_movie;
    for(j=0;j<MAX_USER-1;j++)
    {
      wc=0; 
@@ -83,7 +83,7 @@ void recommendation()
     printf("%d ",association[i1]);
    }
    printf("\n");*/
-   float score[TOTAL_MOVIE+1],sc,sc1,score_recomend[NO_OF_RECOMMENDED],sc2;
+   float score[TOTAL_MOVIE+1],sc,sc1,score_recommend[NO_OF_RECOMMENDED],sc2;
    tot_unseen=x;
    tot_movie=TOTAL_MOVIE;
    for(m=0;m<TOTAL_MOVIE;m++)
@@ -111,23 +111,23 @@ void recommendation()
          tp=tk;
        }
      }
-     movie_recomend[t]=tp;
-     score_recomend[t]=sc2;
+     movie_recommend[t]=tp;
+     score_recommend[t]=sc2;
      score[tp]=0;
     }
-    /* printf("\nuser  : %d Movie Recomended \nMovie id : ",i);
+    /* printf("\nuser  : %d Movie Recommended \nMovie id : ",i);
     for(t1=0;t1<NO_OF_RECOMMENDED-1;t1++)
     {
-      printf("%d    ",movie_recomend[t1]);
+      printf("%d    ",movie_recommend[t1]);
     }*/
 /*------------------------------------------------- Precision Calculation Part --------------------------------------------------------------*/
     printf(" User : %d \n",i);
     int pcount=user[i].mcount*TRAININGPERCENT;
     int pcount_test=user[i].mcount*TESTPERCENT;
-    int save_movie_recomend[NO_OF_RECOMMENDED];
+    int save_movie_recommend[NO_OF_RECOMMENDED];
     for(t1=0;t1<NO_OF_RECOMMENDED-1;t1++)
     {
-      save_movie_recomend[tp]=movie_recomend[tp];
+      save_movie_recommend[tp]=movie_recommend[tp];
     }
     printf("No. of Traing data : %d , No. of Test Data %d",pcount,pcount_test);
     printf("\n");
